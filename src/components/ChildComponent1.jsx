@@ -1,9 +1,10 @@
 import React from 'react';
 
-const ChildComponent1 = () => {
+const ChildComponent1 = ({name}) => {
     return (
         <div>
             Child Com 1
+            {name}
         </div>
     );
 };
