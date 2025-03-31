@@ -7,7 +7,10 @@ const App = () => {
   return (
       <div>
         <h1>React Component</h1>
-        <ChildComponent1 name={myName}/>
+        <ChildComponent1
+            name={myName}
+            setMyName={setMyName}
+        />
       </div>
   );
 };
