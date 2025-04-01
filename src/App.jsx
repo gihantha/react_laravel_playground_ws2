@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
 import './App.css';
-import InputField from "./components/InputField.jsx";
+import ChildComponent1 from "./components/ChildComponent1.jsx";
+
 const App = () => {
+    const [name, setMyName] = useState("Kaveen");
   return (
       <div>
         <h1>React Component</h1>
-          <form action="">
-              <InputField labelName={"First Name  "} inputFieldType={"text"} placeholder={"Enter Your First Name"}/>
-              <InputField labelName={"Second Name  "} inputFieldType={"text"} placeholder={"Enter Your Second Name"}/>
-              <InputField labelName={"Email  "} inputFieldType={"emaill"} placeholder={"Enter Your Email"}/>
-              <InputField labelName={"Password  "} inputFieldType={"password"} placeholder={"Enter Your Password"}/>
-          </form>
+          <ChildComponent1 name={name} />
+
+          {/*Week 5 1.31*/}
       </div>
   );
 };
