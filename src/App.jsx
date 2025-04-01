@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
 import './App.css';
 import ChildComponent1 from "./components/ChildComponent1.jsx";
+import {FirstContext} from "./utilities/context/FirstContext.js";
 
 const App = () => {
-    const [name, setMyName] = useState("Kaveen");
+    const [myName, setMyName] = useState("Kaveen");
+    const [count, setCount] = useState(87);
   return (
       <div>
         <h1>React Component</h1>
-          <ChildComponent1 name={name} />
-
-          {/*Week 5 1.31*/}
+            <FirstContext.Provider value={{myName, count}}>
+                <ChildComponent1 />
+            </FirstContext.Provider>
       </div>
   );
 };
